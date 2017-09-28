@@ -1,0 +1,13 @@
+#N canvas 358 65 1202 753 10;
+#X obj 399 647 output~;
+#X obj 75 33 oscbox~;
+#X obj 342 33 oscbox~;
+#X obj 616 35 oscbox~;
+#X obj 130 245 filterbox~;
+#X connect 1 0 4 0;
+#X connect 2 0 4 2;
+#X connect 3 0 4 4;
+#X connect 4 0 0 0;
+#X connect 4 1 0 1;
+#X connect 4 1 0 0;
+#X connect 4 2 0 1;

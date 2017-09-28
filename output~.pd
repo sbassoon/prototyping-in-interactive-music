@@ -1,0 +1,37 @@
+#N canvas 725 140 713 576 10;
+#X obj 108 129 hsl 75 17 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3100 1;
+#X obj 168 109 tgl 17 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 232 200 inlet~;
+#X obj 540 180 inlet~;
+#X obj 112 180 s \$0-fader;
+#X msg 360 107 \; pd dsp 1;
+#X obj 255 85 route 0 1;
+#X msg 206 122 \; pd dsp 0;
+#X obj 377 258 r \$0-fader;
+#X obj 377 318 pack 0 50;
+#X obj 337 344 line~;
+#X obj 467 340 line~;
+#X obj 315 368 *~;
+#X obj 450 368 *~;
+#X msg 363 226 0;
+#X obj 363 199 loadbang;
+#X obj 386 487 dac~;
+#X text 103 112 DSP on/off;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 12 0;
+#X connect 3 0 13 0;
+#X connect 6 0 7 0;
+#X connect 6 1 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 1;
+#X connect 11 0 13 1;
+#X connect 12 0 16 0;
+#X connect 13 0 16 1;
+#X connect 14 0 9 0;
+#X connect 15 0 14 0;
+#X coords 0 -1 1 1 90 50 1 100 100;

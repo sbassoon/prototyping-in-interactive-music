@@ -1,0 +1,23 @@
+#N canvas 0 23 766 768 10;
+#X obj 166 336 oscbox~;
+#X msg 165 123 442;
+#X text 193 123 inlet 1:;
+#X text 91 33 A four-oscillator synth with controls for sine \, triangle
+\, square \, and sawtooth waves \, with mixing controls for each.;
+#X msg 204 203 on;
+#X msg 215 225 off;
+#X msg 226 249 volume 0.5;
+#X text 249 187 inlets 2-5:;
+#X obj 141 86 loadbang;
+#X text 204 138 Frequency -- takes real numbers;
+#X obj 240 690 output~;
+#X text 260 202 Controls for turning waves on ("on" message) \, off
+("off" message) \, and setting volume ("volume [real number]" message).
+;
+#X connect 0 0 10 0;
+#X connect 0 0 10 1;
+#X connect 1 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 1;
+#X connect 6 0 0 1;
+#X connect 8 0 1 0;

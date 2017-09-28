@@ -1,0 +1,11 @@
+#N canvas 767 307 604 354 10;
+#X obj 33 62 osc~ 442;
+#X obj 34 87 *~ 0.75;
+#X obj 41 148 output~;
+#X text 213 25 Provides easy audio output to sound card.;
+#X text 137 158 Toggle controls whether digital signal processing is
+on.;
+#X text 43 202 Volume slider controls audio level.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;

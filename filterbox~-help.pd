@@ -1,0 +1,55 @@
+#N canvas 728 189 816 771 10;
+#X obj 192 439 filterbox~;
+#X obj 41 373 noise~;
+#X obj 233 359 phasor~ 442;
+#X obj 407 277 phasor~ 347;
+#X obj 223 689 output~;
+#X text 41 354 Lo-pass filter input;
+#X text 244 339 Hi-pass filter input;
+#X msg 155 223 on;
+#X msg 166 247 off;
+#X msg 175 273 frequency 500;
+#X msg 186 297 volume 0.75;
+#X msg 432 301 on;
+#X msg 443 325 off;
+#X text 54 159 inlets 2 & 4:;
+#X text 71 174 Controls for turning filters on ("on" message) \, off
+("off" message) \, setting frequency ("frequency [real number]" message)
+\, and volume ("volume [real number]" message).;
+#X msg 463 375 q 14;
+#X msg 473 401 volume 0.45;
+#X msg 452 351 frequency 1483;
+#X text 374 254 Bandpass filter input;
+#X text 438 445 Controls for turning bandpass filter on ("on" message)
+\, off ("off" message) \, setting frequency ("frequency [real number]"
+message) \, setting resonance ("q [real number]" message) and volume
+("volume [real number]" message).;
+#X text 24 339 inlet~ 1:;
+#X text 227 324 inlet~ 3:;
+#X text 421 430 inlet 6:;
+#X text 357 239 inlet~ 5:;
+#X text 18 567 outlet~ 1:;
+#X text 35 582 Lo-pass filter output;
+#X text 48 617 outlet~ 2:;
+#X text 65 632 Hi-pass filter output;
+#X text 362 594 outlet~ 3:;
+#X text 379 609 Bandpass filter output;
+#X text 131 40 An interface for controlling three different kinds of
+filters: lo-pass \, hi-pass \, and bandpass.;
+#X text 357 661 NOTE: If filters are off \, signal will pass straight
+through to the volume controller.;
+#X connect 0 0 4 0;
+#X connect 0 1 4 1;
+#X connect 0 2 4 1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 2;
+#X connect 3 0 0 4;
+#X connect 7 0 0 1;
+#X connect 8 0 0 1;
+#X connect 9 0 0 1;
+#X connect 10 0 0 1;
+#X connect 11 0 0 5;
+#X connect 12 0 0 5;
+#X connect 15 0 0 5;
+#X connect 16 0 0 5;
+#X connect 17 0 0 5;
